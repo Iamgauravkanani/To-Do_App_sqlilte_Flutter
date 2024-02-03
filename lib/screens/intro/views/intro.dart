@@ -94,14 +94,15 @@ class _IntroState extends State<Intro> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, 'home');
+                      Navigator.pushReplacementNamed(context, 'start');
                     },
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xff8875FF),
-                        minimumSize: const Size(90, 48),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(4),
-                        )),
+                      backgroundColor: const Color(0xff8875FF),
+                      minimumSize: const Size(90, 48),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                    ),
                     child: Text(
                       'NEXT',
                       style: Constant.myStyle(color: Colors.white),
