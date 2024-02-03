@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo_app/screens/home/model/todo_model.dart';
 import 'package:todo_app/utils/helpers/db_helper.dart';
+import '../../../utils/constant/constatnt.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -20,9 +21,16 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: const Color(0xff8875FF),
         onPressed: addTodo,
-        label: const Text('Add TO-DO'),
-        icon: const Icon(Icons.add),
+        label: Text(
+          'Add TO-DO',
+          style: Constant.myStyle(color: Constant.white),
+        ),
+        icon: Icon(
+          Icons.add,
+          color: Constant.white,
+        ),
       ),
       appBar: AppBar(
         title: const Text("To-Do App"),
