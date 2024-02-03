@@ -146,8 +146,7 @@ class _HomeState extends State<Home> {
     );
     int? res = await DBHelper.dbHelper.insertTodo(todo: todo);
 
-    Get.snackbar('To-Do App', 'Task added at $res');
     taskCon.clear();
-    Get.back();
+    Get.snackbar('To-Do App', 'Task added at $res');
   }
 }

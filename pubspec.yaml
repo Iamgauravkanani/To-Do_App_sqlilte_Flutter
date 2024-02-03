@@ -38,6 +38,7 @@ dependencies:
   get:
   sqflite:
   path:
+  google_fonts:
 
 dev_dependencies:
   flutter_test:
