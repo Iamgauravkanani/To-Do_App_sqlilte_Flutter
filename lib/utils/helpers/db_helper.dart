@@ -53,4 +53,13 @@ class DBHelper {
     List args = [d_id];
     return database?.rawDelete(query, args);
   }
+
+  Future<int?> updateTodo({required TODO todo, required int u_id}) async {
+    await initDB();
+    String query =
+        "UPDATE $table_name SET $task=?,$time=?,$date=? WHERE $id=?;";
+    List args = [todo.task, todo.time, todo.date, u_id];
+    int? res = await database?.rawUpdate(query, args);
+    return res;
+  }
 }

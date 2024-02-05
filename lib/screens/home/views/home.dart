@@ -48,6 +48,7 @@ class _HomeState extends State<Home> {
                 itemBuilder: (context, i) {
                   return Card(
                     child: ListTile(
+                      onTap: updateTask,
                       title: Text(
                         "${TodoData?[i].task}",
                         style: const TextStyle(fontWeight: FontWeight.bold),
@@ -156,5 +157,15 @@ class _HomeState extends State<Home> {
 
     taskCon.clear();
     Get.snackbar('To-Do App', 'Task added at $res');
+  }
+
+  updateTask() {
+    Get.defaultDialog(
+        title: "UpToDo App",
+        content: Text("Are you want to Update Task??"),
+        confirm: OutlinedButton(
+          onPressed: () {},
+          child: Text("Update"),
+        ));
   }
 }
